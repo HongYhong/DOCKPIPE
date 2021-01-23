@@ -31,10 +31,7 @@ PARAMERROR = 6
 
 
 
-"""
-FINISH 需要在前端展示的数据，如图片和pdb文件，存到 /home/qnhu/bsp/static/d_dock/results目录下
 
-"""
 
 """
 FINISH 删除 analysis 中间文件    在 analysis.sh 中执行
@@ -214,8 +211,7 @@ def get_results(analysis_dir,docking_dir):
     ec = os.path.basename(analysis_dir.split('_')[1])
 
 
-    print 'analysisdir',analysis_dir
-    print 'in get results############################################################ ',ec
+
 
 
     ##############################################################################重命名部分#################################################################################
@@ -325,13 +321,10 @@ def get_results(analysis_dir,docking_dir):
             print(parentdir)
             print(pose_rank)
             print(docking_dir)
-            print "i am here #####################################################################################1"
             score = get_score(parentdir, pose_rank, docking_dir)
-            print "i am here #####################################################################################2"
             print(score)
 
 
-            print "i am here #####################################################################################3"
             print pdbstaticpath
             result_dct = {
                 "pdbid" : pdbid,
